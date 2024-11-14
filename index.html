@@ -170,17 +170,61 @@
             </div>
         </div>
     </div>
-    <div class="w-full px-4 mt-5">
+    <div class="w-full px-5 mt-5">
         <hr class="w-full border border-black">
+    </div>
+    <div class="mt-5 jobs pb-5">
+        <h1 style="text-wrap: nowrap;">Job Posts</h1>
+        <div class="jobs-container">
+            <div class="job-cards">
+                <div class="job-img">
+                    <img src="images/tw-logo.jpg" alt="" class="img">
+                </div>
+                <div>
+                    <span class="text-danger fw-semibold">New</span>
+                    <h1 class="fa-magic fw-normal">Senior Business Systems Analyst</h1>
+                    <div class="d-flex-column flex gap-2">
+                        <div class="flex d-flex-column w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 0 200 200" xml:space="preserve"
+                                height="50" width="50">
+                                <path fill="#282828"
+                                    d="M100.232 149.198c-2.8 0-5.4-1.8-7.2-5.2-22.2-41-22.4-41.4-22.4-41.6-3.2-5.1-4.9-11.3-4.9-17.6 0-19.1 15.5-34.6 34.6-34.6s34.6 15.5 34.6 34.6c0 6.5-1.8 12.8-5.2 18.2 0 0-1.2 2.4-22.2 41-1.9 3.4-4.4 5.2-7.3 5.2zm.1-95c-16.9 0-30.6 13.7-30.6 30.6 0 5.6 1.5 11.1 4.5 15.9.6 1.3 16.4 30.4 22.4 41.5 2.1 3.9 5.2 3.9 7.4 0 7.5-13.8 21.7-40.1 22.2-41 3.1-5 4.7-10.6 4.7-16.3-.1-17-13.8-30.7-30.6-30.7z" />
+                                <path fill="#282828"
+                                    d="M100.332 105.598c-10.6 0-19.1-8.6-19.1-19.1s8.5-19.2 19.1-19.2c10.6 0 19.1 8.6 19.1 19.1s-8.6 19.2-19.1 19.2zm0-34.3c-8.3 0-15.1 6.8-15.1 15.1s6.8 15.1 15.1 15.1 15.1-6.8 15.1-15.1-6.8-15.1-15.1-15.1z" />
+                            </svg>
+                            <span style="margin-left: -20px;">Work From anywhere</span>
+                            <div style="float: right;" class="money">
+                                <h3>₹50k</h3>
+                                <button class="text-white bg-black px-4 py-2 rounded-4">View job</button>
+                            </div>
+                        </div>
+                        <hr class="mt-5" style="width: 60vw;">
+                        <div style="float:right; display: flex; gap: 10px;" onclick="changeDisplay()">
+                            <span>view details</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" height="20" width="20" style="margin-top: 5px;"><g data-name="18-Arrow Down"><path d="M16 0a16 16 0 1 0 16 16A16 16 0 0 0 16 0zm0 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14z"/><path d="M17 23.59V5h-2v18.59l-5.29-5.3-1.42 1.42 7 7a1 1 0 0 0 1.41 0l7-7-1.41-1.41z"/></g></svg>
+                        </div>
+                        <p class="mt-5" id="display-change">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vitae animi enim doloribus inventore, repellendus iusto ab? Soluta voluptatem doloremque iure corporis deleniti distinctio ipsam saepe, optio maxime consequuntur harum vitae incidunt?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <style>
+    .money {
+        display: flex;
+        gap: 20px;
+    }
     .img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: top;
         border-radius: 20px;
+    }
+    .job-cards {
+        transition: all;
+        transition-duration: 0.3s;
     }
     * {
         outline: none;
@@ -192,7 +236,9 @@
             overflow-x: scroll;
         }
     }
-
+    #display-change {
+        display: none;
+    }
     .image-container {
         margin-top: 50px;
         display: flex;
@@ -266,8 +312,60 @@
     .li-points>li {
         margin-top: 20px;
     }
-
+    
+    .job-img>img {
+        mix-blend-mode: darken;
+        height: 100px;
+        width: 100px;
+    }
+    .job-cards {
+            display: flex;
+            padding: 20px;
+            border-radius: 20px;
+            -webkit-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+            gap: 30px;
+        }
     @media only screen and (min-width: 1260px) {
+        .money {
+            flex-direction: column;
+            gap: 5px;
+        }
+        .job-img {
+            background-color: #cbdbff83;
+            padding: 20px;
+            height: 150px;
+            border-radius: 20px;
+        }
+
+        .job-img>img {
+            mix-blend-mode: darken;
+            height: 100px;
+            width: 100px;
+        }
+
+        .job-cards {
+            display: flex;
+            padding: 20px;
+            border-radius: 20px;
+            -webkit-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+            gap: 30px;
+        }
+
+        .jobs {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            display: flex;
+            gap: 40px;
+        }
+
+        .jobs>div {
+            margin-left: 50px;
+        }
+
         .j-t {
             margin-left: -200px;
         }
@@ -373,5 +471,10 @@
         }
     }
 </style>
-
+<script>
+    const changeDisplay = () => {
+        const elem = document.getElementById("display-change");
+        elem.style.display = elem.style.display=="none"?"block":"none";
+    }
+</script>
 </html>
